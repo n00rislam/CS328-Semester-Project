@@ -1,4 +1,4 @@
-# 🛒 E-Commerce Microservices Deployment with AWS EKS & CI/CD
+# E-Commerce Microservices Deployment with AWS EKS & CI/CD
 
 ## 🚀 Overview
 
@@ -6,21 +6,15 @@ This project demonstrates a scalable, cloud-native deployment of an **E-commerce
 
 ---
 
-## 🧱 Project Architecture
-
-Below is the high-level architecture of the deployed system:
-
-![Architecture Diagram](./A_schematic_diagram_illustrates_an_E-commerce_micr.png)
-
 ### 🧩 Components
 
 - **Cloud Infrastructure (AWS)**:  
   EKS, EC2, RDS, VPC, S3, IAM, Route 53
 
 - **Microservices**:
-  - 🧑‍💼 User Service
-  - 📦 Product Service
-  - 📋 Order Service
+  -  User Service
+  -  Product Service
+  -  Order Service
 
 - **Containerization**: Docker  
 - **Orchestration**: Kubernetes (EKS)  
@@ -35,13 +29,13 @@ Below is the high-level architecture of the deployed system:
 
 Make sure the following tools and accounts are set up before starting:
 
-- ✅ An active AWS Account
-- 🐳 Docker installed and running
-- ⚙️ `kubectl` installed and configured for your EKS cluster
-- ☁️ AWS CLI installed and authenticated
-- 🔄 Jenkins or GitLab CI for CI/CD
-- 🛠️ Terraform for infrastructure provisioning
-- 👨‍💻 Familiarity with **Python (Flask/Django)** or **Java (Spring Boot)** for developing microservices
+-  An active AWS Account
+-  Docker installed and running
+- `kubectl` installed and configured for your EKS cluster
+-  AWS CLI installed and authenticated
+-  Jenkins or GitLab CI for CI/CD
+-  Terraform for infrastructure provisioning
+-  Familiarity with **Python (Flask/Django)** or **Java (Spring Boot)** for developing microservices
 
 ---
 
