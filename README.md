@@ -1,12 +1,12 @@
 # E-Commerce Microservices Deployment with AWS EKS & CI/CD
 
-## 🚀 Overview
+## Overview
 
 This project demonstrates a scalable, cloud-native deployment of an **E-commerce microservices application** using **AWS Elastic Kubernetes Service (EKS)**. The system is fully containerized with **Docker**, orchestrated using **Kubernetes**, and deployed through an automated **CI/CD pipeline** built with **Jenkins** or **GitLab CI**. The backend is powered by **Amazon RDS**, and robust monitoring is achieved using **Prometheus** and **Grafana**. Infrastructure provisioning is handled using **Terraform**.
 
 ---
 
-### 🧩 Components
+### Components
 
 - **Cloud Infrastructure (AWS)**:  
   EKS, EC2, RDS, VPC, S3, IAM, Route 53
@@ -25,7 +25,7 @@ This project demonstrates a scalable, cloud-native deployment of an **E-commerce
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Make sure the following tools and accounts are set up before starting:
 
@@ -39,7 +39,7 @@ Make sure the following tools and accounts are set up before starting:
 
 ---
 
-## 📌 Key Features
+## Key Features
 
 - End-to-end CI/CD pipeline with automated deployment to AWS EKS
 - Modular microservices architecture with containerized services
@@ -49,7 +49,7 @@ Make sure the following tools and accounts are set up before starting:
 
 ---
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 - Add auto-scaling policies via Kubernetes HPA
 - Implement service mesh with Istio
