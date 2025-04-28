@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: order
-        image: your-dockerhub-username/order-service:latest
+        image: ayeshakashif/order-service:latest
         ports:
         - containerPort: 5000
         resources:
