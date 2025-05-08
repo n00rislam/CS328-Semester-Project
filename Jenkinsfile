@@ -133,18 +133,19 @@ pipeline {
     }
     
     post {
-        always {
-            // Wrap the post-actions inside a node block for proper workspace context
-            node {
-                sh 'docker logout'
-                cleanWs()
-            }
-        }
-        success {
-            echo "Pipeline completed successfully!"
-        }
-        failure {
-            echo "Pipeline failed!"
+    always {
+        // Wrap the post-actions inside a node block for proper workspace context
+        node('') {  // Specify a label, or leave it empty for the default agent
+            sh 'docker logout'
+            cleanWs()
         }
     }
+    success {
+        echo "Pipeline completed successfully!"
+    }
+    failure {
+        echo "Pipeline failed!"
+    }
+}
+
 }
