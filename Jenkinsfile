@@ -134,8 +134,11 @@ pipeline {
     
     post {
         always {
-            sh 'docker logout'
-            cleanWs()
+            // Wrap the post-actions inside a node block for proper workspace context
+            node {
+                sh 'docker logout'
+                cleanWs()
+            }
         }
         success {
             echo "Pipeline completed successfully!"
@@ -144,4 +147,4 @@ pipeline {
             echo "Pipeline failed!"
         }
     }
-} 
+}
