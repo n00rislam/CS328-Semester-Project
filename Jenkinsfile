@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_USERNAME = 'your-dockerhub-username'
+        DOCKER_USERNAME = 'ayeshakashif'
         KUBECONFIG = credentials('eks-kubeconfig')
     }
     
@@ -13,21 +13,21 @@ pipeline {
                 stage('Build User Service') {
                     steps {
                         dir('services/user-service') {
-                            sh "docker build -t ${DOCKER_USERNAME}/user-service:latest ."
+                            sh "docker build -t $ayeshakashif/user-service:latest ."
                         }
                     }
                 }
                 stage('Build Product Service') {
                     steps {
                         dir('services/product-service') {
-                            sh "docker build -t ${DOCKER_USERNAME}/product-service:latest ."
+                            sh "docker build -t $ayeshakashif/product-service:latest ."
                         }
                     }
                 }
                 stage('Build Order Service') {
                     steps {
                         dir('services/order-service') {
-                            sh "docker build -t ${DOCKER_USERNAME}/order-service:latest ."
+                            sh "docker build -t $ayeshakashif/order-service:latest ."
                         }
                     }
                 }
@@ -49,12 +49,12 @@ pipeline {
                 }
                 stage('Push Product Service') {
                     steps {
-                        sh "docker push ${DOCKER_USERNAME}/product-service:latest"
+                        sh "docker push $ayeshakashif/product-service:latest"
                     }
                 }
                 stage('Push Order Service') {
                     steps {
-                        sh "docker push ${DOCKER_USERNAME}/order-service:latest"
+                        sh "docker push $ayeshakashif/order-service:latest"
                     }
                 }
             }
