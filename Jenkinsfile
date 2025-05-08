@@ -2,8 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_USERNAME = 'ayeshakashif'
+        DOCKER_USERNAME = 'noor231'
         KUBECONFIG = credentials('eks-kubeconfig')
     }
     
@@ -13,21 +12,21 @@ pipeline {
                 stage('Build User Service') {
                     steps {
                         dir('services/user-service') {
-                            sh "docker build -t $ayeshakashif/user-service:latest ."
+                            sh "docker build -t $noor231/user-service:latest ."
                         }
                     }
                 }
                 stage('Build Product Service') {
                     steps {
                         dir('services/product-service') {
-                            sh "docker build -t $ayeshakashif/product-service:latest ."
+                            sh "docker build -t $noor231/product-service:latest ."
                         }
                     }
                 }
                 stage('Build Order Service') {
                     steps {
                         dir('services/order-service') {
-                            sh "docker build -t $ayeshakashif/order-service:latest ."
+                            sh "docker build -t $noor231/order-service:latest ."
                         }
                     }
                 }
@@ -44,17 +43,17 @@ pipeline {
             parallel {
                 stage('Push User Service') {
                     steps {
-                        sh "docker push ${DOCKER_USERNAME}/user-service:latest"
+                        sh "docker push noor231/user-service:latest"
                     }
                 }
                 stage('Push Product Service') {
                     steps {
-                        sh "docker push $ayeshakashif/product-service:latest"
+                        sh "docker push noor231/product-service:latest"
                     }
                 }
                 stage('Push Order Service') {
                     steps {
-                        sh "docker push $ayeshakashif/order-service:latest"
+                        sh "docker push noor231/order-service:latest"
                     }
                 }
             }
